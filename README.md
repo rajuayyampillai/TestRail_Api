@@ -1,13 +1,13 @@
 # testrail-api-webdriver-java
 Api which is used to create runner and update the result for that runner in testrail , It provides the basic functionality to authenticate API requests.
 
-1. Environment setup
+##1. Environment setup
     
     Please add the contained package to your application or project (e.g. in Eclipse). The API binding also has a separate, external dependency on the JSON.simple library which can downloaded here:
 
 https://code.google.com/p/json-simple/
 
-2. Set up your APIClient using this function 
+##2. Set up your APIClient using this function 
 
    intializeClient(String url)
    
@@ -15,14 +15,14 @@ https://code.google.com/p/json-simple/
              Program api = new Program();
              api.intializeClient("https://<server>/testrail/");
         
-3. Set your username and password using this function
+##3. Set your username and password using this function
 
    setUser(String username, String password);
    
   
             api.setUser("abc@gmail.com", "12345678");
        
-4. To add Runner to your test using this function , this will return Runner id 
+##4. To add Runner to your test using this function , this will return Runner id 
 
    add_run(pid, suiteid, run_name, r_description, r_assignedto_id, r_include_all);
    
@@ -42,7 +42,7 @@ https://code.google.com/p/json-simple/
 
         r_include_all     bool	                 True for including all test cases of the test suite and false for a custom                                                    case selection (default: true)
 
-5. To add result for your testcase
+##5. To add result for your testcase
 
       add_result_for_Case(long rid,int tid,String status,String cmt)
        
